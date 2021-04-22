@@ -19,7 +19,6 @@ const Count = () => {
     minutes: Math.floor((difference % hours) / minutes),
     seconds: Math.floor(difference % minutes),
   };
-  console.log("timeDiff:", timeDiff);
 
   const [secondsLeft, setSecondsLeft] = useState<number>(timeDiff.seconds);
   const [minutesLeft, setMinutesLeft] = useState<number>(timeDiff.minutes);
@@ -45,15 +44,30 @@ const Count = () => {
     };
   });
   return (
-    <div>
-      We're launching soon
-      <div className="numbers">
-        <div className="days">{daysLeft}</div>
-        <div className="hours">{hoursLeft}</div>
-        <div className="minutes">{minutesLeft}</div>
-        <div className="seconds">{secondsLeft}</div>
+    <>
+      <div className="top">We're launching soon</div>
+      <div className="numbers_container">
+        <div className="days_card">
+          <div className="days_card_numbers">{daysLeft}</div>
+          <div className="days_card_text">days</div>
+        </div>
+
+        <div className="hours_card">
+          <div className="hours_card_numbers">{hoursLeft}</div>
+          <div className="hours_card_text">hours</div>
+        </div>
+
+        <div className="minutes_card">
+          <div className="minutes_card_numbers">{minutesLeft}</div>
+          <div className="minutes_card_text">minutes</div>
+        </div>
+
+        <div className="seconds_card">
+          <div className="seconds_card_numbers">{secondsLeft}</div>
+          <div className="seconds_card_text">seconds</div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

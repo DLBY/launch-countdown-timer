@@ -1,4 +1,100 @@
-.numbers {
+@import 'index.css';
+
+
+body {
+  font-family: 'redHat';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--darkest-blue);
+  color: var(--white)
+}
+
+body .app {
+  height:100vh;
+  width:100%;
   display:flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  /* TODO RESPONSIVE PATTERN */
+  background: url(./assets/images/pattern-hills.svg) no-repeat bottom / contain, url(./assets/images/bg-stars.svg), linear-gradient(to bottom, hsl(234, 17%, 12%), #261e2f);
+}
+
+.numbers_container {
+  display:flex;
+  width:100%;
+  justify-content:center;
+  font-size:8vw;
+  margin:20px;
+}
+.numbers_container > div {
+  text-align:center;
+  margin:1%;
+}
+
+.days_card {
+  display: flex;
+  width: 10%;
+  flex-direction: column;
+}
+.days_card_numbers {
+  width: 100%;
+  border: 1px solid black;
+}
+.days_card_text {
+  text-transform: uppercase;
+  font-size: 1vw;
+}
+
+.hours_card {
+  display: flex;
+  width: 10%;
+  flex-direction: column;
+}
+.hours_card_numbers {
+  width: 100%;
+  border: 1px solid black;
+}
+.hours_card_text {
+  text-transform: uppercase;
+  font-size: 1vw;
+}
+
+.minutes_card {
+  display: flex;
+  width: 10%;
+  flex-direction: column;
+}
+.minutes_card_numbers {
+  width: 100%;
+  border: 1px solid black;
+}
+.minutes_card_text {
+  text-transform: uppercase;
+  font-size: 1vw;
+}
+
+.seconds_card {
+  display: flex;
+  width: 10%;
+  flex-direction: column;
+}
+.seconds_card_numbers {
+  width: 100%;
+  border: 1px solid black;
+}
+.seconds_card_text {
+  text-transform: uppercase;
+  font-size: 1vw;
+}
+
+.top {
+  font-size: 24px;
+  font-weight: var(--bold);
+}
+
+.footer {
+  font-size: 14px;
+  font-weight: var(--bold);
 }
