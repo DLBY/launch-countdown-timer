@@ -1,10 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState, useEffect } from "react";
-import countdown from "../../tools/countdown";
 
 const Count = () => {
-  interface CountingData {
-    seconds: number;
-  }
+  // interface CountingData {
+  //   seconds: number;
+  // }
 
   const [seconds, setSeconds] = useState<number>(60);
   const [minutes, setMinutes] = useState<number>(60);
@@ -48,22 +48,42 @@ const Count = () => {
       <div className="top">We're launching soon</div>
       <div className="numbers_container">
         <div className="days_card">
-          <div className="days_card_numbers">{daysLeft}</div>
+          <div className="days_card_numbers">
+            <div className="dot left"></div>
+            <div className="line"></div>
+            {daysLeft}
+            <div className="dot right"></div>
+          </div>
           <div className="days_card_text">days</div>
         </div>
 
         <div className="hours_card">
-          <div className="hours_card_numbers">{hoursLeft}</div>
+          <div className="hours_card_numbers">
+            <div className="dot left"></div>
+            <div className="line"></div>
+            {hoursLeft}
+            <div className="dot right"></div>
+          </div>
           <div className="hours_card_text">hours</div>
         </div>
 
         <div className="minutes_card">
-          <div className="minutes_card_numbers">{minutesLeft}</div>
+          <div className="minutes_card_numbers">
+            <div className="dot left"></div>
+            <div className="line"></div>
+            {minutesLeft}
+            <div className="dot right"></div>
+          </div>
           <div className="minutes_card_text">minutes</div>
         </div>
 
         <div className="seconds_card">
-          <div className="seconds_card_numbers">{secondsLeft}</div>
+          <div className="seconds_card_numbers">
+            <div className="dot left"></div>
+            <div className="line"></div>
+            {secondsLeft}
+            <div className="dot right"></div>
+          </div>
           <div className="seconds_card_text">seconds</div>
         </div>
       </div>
