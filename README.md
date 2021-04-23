@@ -28,7 +28,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [https://dlby-launch-countdown.netlify.app/](https://your-live-site-url.com)
+- Live Site URL: [https://dlby-launch-countdown.netlify.app/](https://dlby-launch-countdown.netlify.app/)
 
 ## My process
 
