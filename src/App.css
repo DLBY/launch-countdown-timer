@@ -23,6 +23,7 @@ body .app {
 
 body .top {
   text-transform: uppercase;
+  text-align: center;
   letter-spacing:.25rem;
   padding-top:10%;
   margin-bottom:2em;
@@ -33,7 +34,7 @@ body .top {
   width:100%;
   height:70%;
   justify-content:center;
-  font-size:7vw;
+  font-size:8vw;
   margin:20px;
 }
 .numbers_container > div {
@@ -41,13 +42,13 @@ body .top {
   margin:1%;
 }
 
-.days_card {
+.card {
   display: flex;
   overflow: hidden;
   width: 10%;
   flex-direction: column;
 }
-.days_card_numbers {
+.card_numbers {
   box-shadow: 0.5px 0.5rem var(--dark);
   width: 100%;
   filter: brightness(80%);
@@ -55,75 +56,11 @@ body .top {
   border-radius: 0.80rem;
   color: var(--secondary);
 }
-.days_card_text {
+.card_text {
   color:var(--primary);
-  padding-top:1em;
+  margin-top:2em;
   text-transform: uppercase;
-  font-size: 1vw;
-}
-
-.hours_card {
-  display: flex;
-  overflow: hidden;
-  height:100%;
-  width: 10%;
-  flex-direction: column;
-}
-.hours_card_numbers {
-  width: 100%;
-  box-shadow: 0.5px 0.5rem var(--dark);
-  filter: brightness(80%);
-  background: #343650;
-  border-radius: 0.80rem;
-  color: var(--secondary);
-}
-.hours_card_text {
-  color:var(--primary);
-  padding-top:1em;
-  text-transform: uppercase;
-  font-size: 1vw;
-}
-
-.minutes_card {
-  display: flex;
-  overflow: hidden;
-  width: 10%;
-  flex-direction: column;
-}
-.minutes_card_numbers {
-  box-shadow: 0.5px 0.5rem var(--dark);
-  width: 100%;
-  filter: brightness(80%);
-  background: #343650;
-  border-radius: 0.80rem;
-  color: var(--secondary);
-}
-.minutes_card_text {
-  color:var(--primary);
-  padding-top:1em;
-  text-transform: uppercase;
-  font-size: 1vw;
-}
-
-.seconds_card {
-  display: flex;
-  overflow: hidden;
-  width: 10%;
-  flex-direction: column;
-}
-.seconds_card_numbers {
-  box-shadow: 0.5px 0.5rem var(--dark);
-  width: 100%;
-  filter: brightness(80%);
-  background: #343650;
-  border-radius: 0.80rem;
-  color: var(--secondary);
-}
-.seconds_card_text {
-  color:var(--primary);
-  padding-top:1em;
-  text-transform: uppercase;
-  font-size: 1vw;
+  font-size: 1.5vw;
 }
 
 .top {
@@ -135,8 +72,7 @@ body .top {
   position: absolute;
   top:45%;
   width:1rem;
-  --dot_height:1rem;
-  height: var(--dot_height);
+  height: 1rem;
   border-radius:50%;
   filter: brightness(80%);
   background:var(--dark);
@@ -149,10 +85,6 @@ body .top {
   height:0.2%;
   width:100%;
   background:var(--dark);
-}
-@media (min-width: 1020px) {
-}
-@media (min-width: 1440px) {
 }
 
 .dot.right {
@@ -179,4 +111,36 @@ body .top {
   cursor: pointer;
   fill: var(--secondary);
   transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 1020px) {
+  .dot {
+    height: 0.5rem;
+    width:0.5rem;
+    top:40%;
+  }
+  .dot.left {
+    left: -0.2rem;
+  }
+  .dot.right {
+    right: -0.2rem;
+  }
+  .card {
+    width: 20%;
+  }
+  body .top {
+    padding-top:30%;
+  }
+  .card_text {
+    margin-top:2.5em;
+    font-size: 2vw;
+  }
+  .numbers_container {
+    font-size:10vw;
+  }
+}
+@media (min-width: 1440px) {
+  body .app {
+    background: url(./assets/images/pattern-hills.svg) no-repeat bottom / contain, url(./assets/images/bg-stars.svg), linear-gradient(to bottom, hsl(234, 17%, 12%), #261e2f);
+  }
 }

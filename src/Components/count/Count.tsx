@@ -11,7 +11,7 @@ const Count = () => {
   const [hours, setHours] = useState<number>(60 * minutes);
   const [days, setDays] = useState<number>(24 * hours);
 
-  const launchDate = Date.parse("2021-04-28T08:33:37+0000") / 1000;
+  const launchDate = Date.parse("2021-04-29T08:33:37+0000") / 1000;
   const difference = launchDate - Date.now() / 1000;
   const timeDiff = {
     days: Math.floor(difference / days),
@@ -47,44 +47,48 @@ const Count = () => {
     <>
       <div className="top">We're launching soon</div>
       <div className="numbers_container">
-        <div className="days_card">
-          <div className="days_card_numbers">
+        <div className="card">
+          <div className="card_numbers">
             <div className="dot left"></div>
             <div className="line"></div>
-            {daysLeft}
+            {daysLeft >= 0 && daysLeft < 10 ? `0${daysLeft}` : daysLeft}
             <div className="dot right"></div>
           </div>
-          <div className="days_card_text">days</div>
+          <div className="card_text">days</div>
         </div>
 
-        <div className="hours_card">
-          <div className="hours_card_numbers">
+        <div className="card">
+          <div className="card_numbers">
             <div className="dot left"></div>
             <div className="line"></div>
-            {hoursLeft}
+            {hoursLeft >= 0 && hoursLeft < 10 ? `0${hoursLeft}` : hoursLeft}
             <div className="dot right"></div>
           </div>
-          <div className="hours_card_text">hours</div>
+          <div className="card_text">hours</div>
         </div>
 
-        <div className="minutes_card">
-          <div className="minutes_card_numbers">
+        <div className="card">
+          <div className="card_numbers">
             <div className="dot left"></div>
             <div className="line"></div>
-            {minutesLeft}
+            {minutesLeft >= 0 && minutesLeft < 10
+              ? `0${minutesLeft}`
+              : minutesLeft}
             <div className="dot right"></div>
           </div>
-          <div className="minutes_card_text">minutes</div>
+          <div className="card_text">minutes</div>
         </div>
 
-        <div className="seconds_card">
-          <div className="seconds_card_numbers">
+        <div className="card">
+          <div className="card_numbers">
             <div className="dot left"></div>
             <div className="line"></div>
-            {secondsLeft}
+            {secondsLeft >= 0 && secondsLeft < 10
+              ? `0${secondsLeft}`
+              : secondsLeft}
             <div className="dot right"></div>
           </div>
-          <div className="seconds_card_text">seconds</div>
+          <div className="card_text">seconds</div>
         </div>
       </div>
     </>
