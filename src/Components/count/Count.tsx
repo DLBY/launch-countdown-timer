@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from "react";
 
 const Count = () => {
+  const flip = () => {};
+
   // interface CountingData {
   //   seconds: number;
   // }
@@ -83,9 +85,21 @@ const Count = () => {
           <div className="card_numbers">
             <div className="dot left"></div>
             <div className="line"></div>
-            {secondsLeft >= 0 && secondsLeft < 10
-              ? `0${secondsLeft}`
-              : secondsLeft}
+            <div className="top_number">
+              {secondsLeft >= 0 && secondsLeft < 10
+                ? `0${secondsLeft}`
+                : secondsLeft}
+            </div>
+            <div className="bot_number">
+              {secondsLeft >= 0 && secondsLeft < 10
+                ? `0${secondsLeft}`
+                : secondsLeft}
+            </div>
+            <div className="persistent_number">
+              {secondsLeft >= 0 && secondsLeft < 10
+                ? `0${secondsLeft}`
+                : secondsLeft}
+            </div>
             <div className="dot right"></div>
           </div>
           <div className="card_text">seconds</div>
